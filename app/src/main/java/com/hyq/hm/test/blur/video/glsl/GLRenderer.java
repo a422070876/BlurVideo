@@ -25,7 +25,7 @@ public class GLRenderer {
         String fragmentShader = "varying highp vec2 vTexCoord;\n" +
                 "uniform sampler2D sTexture;\n" +
                 "void main() {\n" +
-                "   highp vec4 rgba = texture2D(sTexture , vec2(vTexCoord.x,1.0 - vTexCoord.y));\n" +
+                "   highp vec4 rgba = texture2D(sTexture , vec2(vTexCoord.x,vTexCoord.y));\n" +
                 "   gl_FragColor = rgba;\n" +
                 "}";
         String vertexShader = "attribute vec4 aPosition;\n" +
